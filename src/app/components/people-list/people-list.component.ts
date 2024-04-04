@@ -9,6 +9,7 @@ import { PageEvent } from '@angular/material/paginator';
   styleUrls: ['./people-list.component.css']
 })
 export class PeopleListComponent implements OnInit {
+  searchTerm: string = '';
   allObjects: any[] = [];
   totalPeople!: number;
   pageSize: number = 10; // adjust as per your requirement
@@ -25,6 +26,18 @@ export class PeopleListComponent implements OnInit {
       this.allObjects = data.results;
       this.totalPeople = data.count;
     });
+}
+search(): void {
+  if (this.searchTerm.trim() !== '') {
+    this.swapiService.searchPeopleByName(this.searchTerm).subscribe(
+      (data: any) => {
+        this.allObjects = data.results;
+      },
+      (error: any) => {
+        console.error('Error fetching data:', error);
+      }
+    );
+  }
 }
 
 onPageChange(event: PageEvent) {

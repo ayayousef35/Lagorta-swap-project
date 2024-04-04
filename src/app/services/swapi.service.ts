@@ -16,6 +16,10 @@ export class SwapiService {
     return this.http.get(`${this.apiUrl}/people/?page=${page}`);
   }
 
+  searchPeopleByName(name: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/people/?search=${name}`);
+  }
+
 //   getAllObjects(): Observable<any[]> {
 //     const requests = [];
 //     for (let i = 1; i <= 5; i++) { // Assuming there are 5 pages with 82 objects in total

@@ -8,6 +8,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatPaginatorModule} from '@angular/material/paginator'
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -37,6 +39,8 @@ import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.com
     MatToolbarModule,
     MatProgressSpinnerModule,
     MatPaginatorModule,
+    FormsModule,
+    MatInputModule
     
   ],
   providers: [],

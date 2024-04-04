@@ -1,3 +1,18 @@
+.search{
+  text-align: center; 
+}
+mat-form-field{
+  color: var(--title-color);
+  /* background-color: var(--bg-color); */
+}
+button{
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+}
+button:hover{
+  background-color: var(--main-color);
+}
 .container-list{
   /* padding: 50px;
   display: flex;
@@ -42,4 +57,16 @@ mat-paginator{
 }
 mat-card-subtitle{
   color: var(--title-color);
+}
+@media (max-width:799px) {
+  .container-list{
+    grid-template-columns: 1fr 1fr ; 
+    justify-items: center;
+  }
+}
+@media (max-width:477px){
+  .container-list{
+    grid-template-columns: 1fr ; 
+    justify-items: center;
+  }
 }
