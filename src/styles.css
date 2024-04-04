@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+:root{
+  --bady-color: #fff;
+  --bg-color:#f8f8f8;
+  --text-color: #1e1e1e;
+  --title-color:#333333;
+  --main-color :#93c47d;
+  --shadow-:#94c47d5e;
+  --shadow-hover:#94c47d7e;
+
+
+}
+body{
+  
+  font-family: 'Montserrat Alternates', sans-serif!important;
+}
+input{
+  background-color: transparent !important;
+  
+}
+html, body { height: 100%; }
+body { margin: 0; padding: 0; box-sizing: border-box; background-color: var(--bady-color);}
+.container{
+    padding: 0 50px;
+    font-family: 'Montserrat Alternates', sans-serif!important;
+
+}
+
+.dark-theme {
+  --bady-color:#252525;
+  --bg-color:#404139;
+  --text-color: #fff;
+  --title-color:#f3f6f4;
+  --main-color :#93c47d;
+  --shadow-:#94c47d31;
+  --shadow-hover:#94c47d54;
+
+
+
+  }

@@ -1,0 +1,19 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 50px;
+    background-color: var(--bady-color);
+}
+.logo{
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+mat-icon{
+    font-size: 27px;
+    
+
+}
