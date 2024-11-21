@@ -1,17 +1,38 @@
-.search{
-  text-align: center; 
+.search {
+  text-align: center;
 }
-mat-form-field{
+
+mat-form-field {
   color: var(--title-color);
-  /* background-color: var(--bg-color); */
+  margin-left: 20px;
+  width: 250px;
+  border-bottom-left-radius:10px ;
+
+  outline: none;
+  border: none;
 }
-button{
+mat-raised-button{
+  border-radius: 0;
+}
+
+input {
+  border-bottom: 2px solid var(--main-color); /* Added border style and width */
+  height: 10px;
+  border-radius: 30px;
+}
+
+button {
+  padding: 27px 20px; /* Adjusted padding for a better appearance */
+  margin-left: 20px;
   color: var(--text-color);
   background-color: var(--bg-color);
-
+  border: none; /* Ensure there's no border on the button */
+  cursor: pointer; /* Add a pointer cursor for better UX */
 }
-button:hover{
+
+button:hover {
   background-color: var(--main-color);
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 .container-list{
   /* padding: 50px;

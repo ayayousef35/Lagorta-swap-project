@@ -1,8 +1,9 @@
 <div class="search">
+  <button mat-raised-button  (click)="search()">Search</button>
     <mat-form-field>
-      <input matInput placeholder="Search by name" [(ngModel)]="searchTerm">
+      <input matInput  placeholder="Search by name" [(ngModel)]="searchTerm">
     </mat-form-field>
-    <button mat-raised-button  (click)="search()">Search</button>
+    
   </div>
 <div *ngIf="allObjects">
 <div class="container-list container" >

@@ -8,14 +8,46 @@ import { ThemeService } from '../../services/theme.service'
 })
 export class ThemeToggleComponent {
 
-  isDarkMode: boolean;
+  isDarkMode: boolean=true;
 
   constructor(private themeService: ThemeService) {
-    this.isDarkMode = this.themeService.isDarkMode();
+    const storedTheme = localStorage.getItem('isDarkMode');
+
+    this.isDarkMode = storedTheme=== 'false';
+  }
+  ngOnInit(): void {
+      this.isDarkMode = this.themeService.isDarkMode();
+
+    this.applyTheme();
+  }
+ 
+
+  toggleTheme(): void {
+    this.isDarkMode = !this.isDarkMode;
+    localStorage.setItem('isDarkMode', this.isDarkMode.toString());
+    const isDarkMode = !this.themeService.isDarkMode();
+    this.themeService.setDarkMode(isDarkMode);
+    this.applyTheme();
   }
 
-  toggleTheme() {
-    this.isDarkMode = !this.isDarkMode;
-    this.themeService.setDarkMode(this.isDarkMode);
+  private applyTheme(): void {
+    const darkMode = this.themeService.isDarkMode();
+    if (darkMode) {
+      document.body.classList.add('dark-theme');
+    } else {
+      document.body.classList.remove('dark-theme');
+    }
   }
+
+
+ 
+
+  // constructor(private themeService: ThemeService) {
+  //   this.isDarkMode = this.themeService.isDarkMode();
+  // }
+
+  // toggleTheme() {
+  //   this.isDarkMode = !this.isDarkMode;
+  //   this.themeService.setDarkMode(this.isDarkMode);
+  // }
 }

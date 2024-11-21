@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+
 :root{
   --bady-color: #fff;
   --bg-color:#f8f8f8;
@@ -10,6 +11,10 @@
   --shadow-hover:#94c47d7e;
 
 
+}
+html {
+  /* --mdc-filled-text-field-caret-color: #673ab7; */
+  --mdc-filled-text-field-focus-active-indicator-color: #93c47d;
 }
 body{
   
@@ -38,4 +43,4 @@ body { margin: 0; padding: 0; box-sizing: border-box; background-color: var(--ba
 
 
 
-  }
+}

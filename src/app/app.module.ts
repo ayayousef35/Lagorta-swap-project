@@ -40,7 +40,7 @@ import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.com
     MatProgressSpinnerModule,
     MatPaginatorModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
     
   ],
   providers: [],
